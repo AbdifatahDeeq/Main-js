@@ -275,3 +275,19 @@
 // const sum = numbers.reduce((total, mult) => total * mult, 1);
 
 // console.log(sum)
+
+
+
+//Array destructuring 
+
+//Exercise
+
+let colours = ["Red", "Green", "Blue"]
+let [red, green, blue] = colours;
+console.log(red)
+console.log(blue)
+ 
+console.log("Qaybtan hoosena waa suubis")
+
+console.log(`${red} and ${blue}`)
+
