@@ -280,14 +280,34 @@
 
 //Array destructuring 
 
-//Exercise
+//Exercise #22
 
-let colours = ["Red", "Green", "Blue"]
-let [red, green, blue] = colours;
-console.log(red)
-console.log(blue)
+// let colours = ["Red", "Green", "Blue"]
+// let [red, green, blue] = colours;
+// console.log(red)
+// console.log(blue)
  
-console.log("Qaybtan hoosena waa suubis")
+// console.log("Qaybtan hoosena waa suubis")
 
-console.log(`${red} and ${blue}`)
+// console.log(`${red} and ${blue}`)
 
+
+
+//object destruction
+// const person = {
+//     name: "Abdalla",
+//     Age: 25,
+//     city: "Wonderland",
+
+// }
+// const { name,Age, city } = person;
+// console.log(name, Age, city)
+ 
+
+//Exercise #23
+
+let car = { Made: "Totoya", Model: "RAV-4", Year: "2024" }
+
+let { Made , Model }= car
+
+console.log(`${Made} \n ${Model}`);
