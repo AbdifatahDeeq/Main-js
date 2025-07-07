@@ -204,7 +204,7 @@
 
 // Exercise #17
 
-let temperature = 8;
+// let temperature = 8;
 
 // if (temperature <= 0)
 // {
@@ -231,6 +231,47 @@ let temperature = 8;
 //Exercise #18
   
 
-const grade = prompt("Enter your grade")
-const massege = grade >= 60 ? "Congragulations you are passed" : " Sorry do it again"
- alert(massege)
+// const grade = prompt("Enter your grade")
+// const massege = grade >= 60 ? "Congragulations you are passed" : " Sorry do it again"
+//  alert(massege)
+
+// let fruits = ["Apple", "bannana", "cherry"];
+// fruits.forEach((fruit) => {
+//     console.log(fruits.length);
+// })
+
+//high order arrat function
+
+// Exercise #19
+//forEach()
+// let numbers = [1, 2, 3, 4, 5];
+// numbers.forEach((number) => {
+//     console.log(number)
+// });
+  
+
+
+// map()
+
+
+
+// let numbers = [1, 2, 3, 4, 5];
+// const newNumber = numbers.map((number) =>
+// number * 3)
+//  console.log(newNumber)
+
+// //Exercise #20
+// let fruits = ["Apple", "bannana", "cherry"];
+// fruits.map((fruit) => {
+//   console.log(fruit.length);
+// });
+
+// reduce()
+
+//Exercise #21
+
+// const numbers = [1, 2, 3, 4, 5];
+
+// const sum = numbers.reduce((total, mult) => total * mult, 1);
+
+// console.log(sum)
