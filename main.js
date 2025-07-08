@@ -306,8 +306,34 @@
 
 //Exercise #23
 
-let car = { Made: "Totoya", Model: "RAV-4", Year: "2024" }
+// let car = { Made: "Totoya", Model: "RAV-4", Year: "2024" }
 
-let { Made , Model }= car
+// let { Made , Model }= car
 
-console.log(`${Made} \n ${Model}`);
+// console.log(`${Made} \n ${Model}`);
+
+
+//default parameters
+
+
+
+// function calculateArea(width, hight = width) {
+//      console.log(width * hight)
+     
+// }
+// calculateArea(4, 6)// the output 24
+//  calculateArea(7)  //// the output 49
+
+
+// we can write also like this 
+
+calculateArea = (width, height = width) => {
+    return width * height
+   
+}
+console.log(calculateArea(6, 6))// the output 36
+console.log(calculateArea(6))// the output 36
+
+
+   
+
