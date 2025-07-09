@@ -400,22 +400,43 @@
 
 
 
-function userData(callback) {
-   setTimeout(() => {
-      const user = {
-         Name: "Abdalla", Id: "CA7"
-      }
-      callback(user)
-   },5000)
+// function userData(callback) {
+//    setTimeout(() => {
+//       const user = {
+//          Name: "Abdalla", Id: "CA7"
+//       }
+//       callback(user)
+//    },5000)
  
+// }
+
+// userData(function (user){
+//    console.log(user)
+// })
+ 
+
+
+//   console.log("welcome to our plattform");
+
+// console.log("wait the user data");
+
+// Promise
+
+function fetchingUserdata() {
+   return new Promise(( except , reject) => {
+      setTimeout(() => {
+         const success = false;
+         if (success) {
+            except({
+               Name: "Abdalla",
+               Id: "CA7"
+            })
+         }
+         else { reject(" User data is rejected") }
+      },1000)
+   })
 }
 
-userData(function (user){
-   console.log(user)
-})
- 
-
-
-  console.log("welcome to our plattform");
-
-console.log("wait the user data");
+fetchingUserdata()
+  .then((data) => console.log("User data", data))
+  .catch((error) => console.error("Error:", error));
