@@ -327,13 +327,48 @@
 
 // we can write also like this 
 
-calculateArea = (width, height = width) => {
-    return width * height
+// calculateArea = (width, height = width) => {
+//     return width * height
    
+// }
+// console.log(calculateArea(6, 6))// the output 36
+// console.log(calculateArea(6))// the output 36
+
+
+//Rest and spread operator
+
+
+
+
+   
+// const Array1 = [1, 2, 3, 4, 5]
+// const Array2 = [...Array1, 6, 7, 8, 9, 10];
+
+// console.log(Array2);
+
+
+
+// const A1 = [2, 4, 6, 8, 10]
+// const A2 = [... A1, 12, 14, 16, 28, 20]
+
+//  console.log(A2)
+
+
+
+// iskudar = (...tirada) => {
+//      return tirada.reduce((wadar, tirada) => wadar+tirada,0)
+// }
+// console.log(iskudar(20, 10, 30))
+
+//Exercise #25
+
+//spread operator
+// const Ar1 = [1, 2,  3]
+// const Ar2 = [...Ar1, 4, 5, 6]
+
+// console.log(Ar2)
+
+const mult = (...Result) => {
+   return Result.reduce((num1,num2) => num1 * num2, 1) 
 }
-console.log(calculateArea(6, 6))// the output 36
-console.log(calculateArea(6))// the output 36
-
-
-   
-
+console.log(mult(10, 3))
