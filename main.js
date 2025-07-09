@@ -368,7 +368,54 @@
 
 // console.log(Ar2)
 
-const mult = (...Result) => {
-   return Result.reduce((num1,num2) => num1 * num2, 1) 
+// const mult = (...Result) => {
+//    return Result.reduce((num1,num2) => num1 * num2, 1) 
+// }
+// console.log(mult(10, 3))
+
+// synchronous and Asynchronous
+
+//settimeout
+
+// setTimeout(() =>
+// console.log("call me after 4 seconds"), 4000)
+
+
+// synchronous
+
+
+
+
+// function userData() {
+//    alert("Would you like to see the user data, click ok if your answar is yes")
+//    return { Name: "Abdalla", ID:"CA7"}
+// }
+
+// const user = userData()
+
+// console.log("user data", user)
+
+// console.log("Answar the Alert first")
+
+
+
+
+function userData(callback) {
+   setTimeout(() => {
+      const user = {
+         Name: "Abdalla", Id: "CA7"
+      }
+      callback(user)
+   },5000)
+ 
 }
-console.log(mult(10, 3))
+
+userData(function (user){
+   console.log(user)
+})
+ 
+
+
+  console.log("welcome to our plattform");
+
+console.log("wait the user data");
