@@ -1,0 +1,12 @@
+{
+    "Name": "Abdalla",
+    "ID": "CA7",
+    "City": "Mugdishu",
+    "Order":[
+        {
+        "ID":1, "product": "laptop", "quantity":3},
+        {
+           "ID":2, "product": "mouse", "quantity":3} 
+       
+    ]
+}

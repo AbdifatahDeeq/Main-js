@@ -425,7 +425,7 @@
 function fetchingUserdata() {
    return new Promise(( except , reject) => {
       setTimeout(() => {
-         const success = false;
+         const success = true;
          if (success) {
             except({
                Name: "Abdalla",
@@ -437,6 +437,54 @@ function fetchingUserdata() {
    })
 }
 
-fetchingUserdata()
-  .then((data) => console.log("User data", data))
-  .catch((error) => console.error("Error:", error));
+// fetchingUserdata()
+//   .then((data) => console.log("User data", data))
+//    .catch((error) => console.error("Error:", error));
+  
+
+//Async And Await
+   
+// async function userDatadisplay() {
+//    try {
+//       console.log("Start fetching user data")
+//       const user = await fetchingUserdata()
+//       console.log("user data", user)
+//    }
+//    catch (error) {
+//       console.log(" there is error whith the user data")
+//    }
+// }
+// userDatadisplay();
+
+
+// // JSON TO OBJECT
+//OBJECT TO JSON
+
+// const userData = {
+//    Name: "Abdalla",
+//    ID: "BiT11",
+//    City: "mugdishu"
+   
+// }
+//  //json to object
+// const jsonstring = JSON.stringify(userData);
+
+// console.log(jsonstring)
+
+// //object to json
+
+// const object = JSON.parse(jsonstring);
+
+// console.log(object)
+
+
+//fetching user data
+//Exercise #29 
+
+async function fetchingDatafromjson() {
+   console.log("starting fetching user data");
+   const respon = await fetch("https://jsonplaceholder.typicode.com/posts");
+   const userData = await respon.json();
+   console.log("Response:", userData[0], userData[2]);
+}
+fetchingDatafromjson(); 
