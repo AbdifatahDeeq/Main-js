@@ -422,20 +422,20 @@
 
 // Promise
 
-function fetchingUserdata() {
-   return new Promise(( except , reject) => {
-      setTimeout(() => {
-         const success = true;
-         if (success) {
-            except({
-               Name: "Abdalla",
-               Id: "CA7"
-            })
-         }
-         else { reject(" User data is rejected") }
-      },1000)
-   })
-}
+// function fetchingUserdata() {
+//    return new Promise(( except , reject) => {
+//       setTimeout(() => {
+//          const success = true;
+//          if (success) {
+//             except({
+//                Name: "Abdalla",
+//                Id: "CA7"
+//             })
+//          }
+//          else { reject(" User data is rejected") }
+//       },1000)
+//    })
+// }
 
 // fetchingUserdata()
 //   .then((data) => console.log("User data", data))
@@ -481,10 +481,37 @@ function fetchingUserdata() {
 //fetching user data
 //Exercise #29 
 
-async function fetchingDatafromjson() {
-   console.log("starting fetching user data");
-   const respon = await fetch("https://jsonplaceholder.typicode.com/posts");
-   const userData = await respon.json();
-   console.log("Response:", userData[0], userData[2]);
+// async function fetchingDatafromjson() {
+//    console.log("starting fetching user data");
+//    const respon = await fetch("https://jsonplaceholder.typicode.com/posts");
+//    const userData = await respon.json();
+//    console.log("Response:", userData[0], userData[2]);
+// }
+// fetchingDatafromjson(); 
+
+
+//callback Exercise #30
+
+function operator(a,b, callback) {
+   return callback(a, b);
 }
-fetchingDatafromjson(); 
+const add=(a,b)=> {
+   return a + b;
+}
+const sub = (a, b) => {
+   return a - b;
+}
+
+const mult = (a, b) => {
+   return a * b;
+}
+const div = (a, b) => {
+  return a / b;
+};
+console.log(operator(7, 6, add));
+console.log(operator(7, 6, sub));
+console.log(operator(7, 6, mult));
+console.log(operator(7, 6, div));
+
+
+
