@@ -492,26 +492,72 @@
 
 //callback Exercise #30
 
-function operator(a,b, callback) {
-   return callback(a, b);
-}
-const add=(a,b)=> {
-   return a + b;
-}
-const sub = (a, b) => {
-   return a - b;
-}
+// function operator(a,b, callback) {
+//    return callback(a, b);
+// }
+// const add=(a,b)=> {
+//    return a + b;
+// }
+// const sub = (a, b) => {
+//    return a - b;
+// }
 
-const mult = (a, b) => {
-   return a * b;
+// const mult = (a, b) => {
+//    return a * b;
+// }
+// const div = (a, b) => {
+//   return a / b;
+// };
+// console.log(operator(7, 6, add));
+// console.log(operator(7, 6, sub));
+// console.log(operator(7, 6, mult));
+// console.log(operator(7, 6, div));
+
+
+//fetch API using GET request
+
+// async function fetchData() {
+//   try {
+//     console.log("Start fetching data...");
+
+//     const response = await fetch(
+//       "https://jsonplaceholder.typicode.com/posts/1"
+//     );
+
+//     if (!response.ok) {
+//       throw new Error(`HTTP error! Status: ${response.status}`);
+//     }
+
+//     const data = await response.json();
+//     console.log("Response data:", data);
+//   } catch (error) {
+//     console.log("Error fetching data:", error);
+//   }
+// }
+
+// fetchData();
+
+
+
+// fetch API using USER request
+//Exercise #31
+
+
+
+async function userRequest() {
+  try {
+    console.log("User information is fetched from the API")
+    const respons = await fetch("https://jsonplaceholder.typicode.com/users");
+    if (!respons.ok) {
+      throw new Error('http error!: ${respons.status}');
+    
+    }
+    const data = await respons.json();
+    console.log("User information:", data);
+  }
+  catch (error) {
+    console.log("User information is fetched:", error)
+   }
 }
-const div = (a, b) => {
-  return a / b;
-};
-console.log(operator(7, 6, add));
-console.log(operator(7, 6, sub));
-console.log(operator(7, 6, mult));
-console.log(operator(7, 6, div));
-
-
+userRequest();
 
